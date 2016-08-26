@@ -8,11 +8,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.minaxipc.myapplicationintent.NewActivity">
-    <TextView android:id="@+id/show_data"
+    <TextView android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="My second activity"
-        android:textStyle="bold"
         />
 
 
