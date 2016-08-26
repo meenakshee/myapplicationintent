@@ -9,8 +9,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.minaxipc.myapplicationintent.MainActivity"
     android:background="@android:color/holo_blue_light">
-
-    <TextViewext
+      <ScrollView
+          android:layout_height="match_parent"
+          android:layout_width="match_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
     android:id="@+id/textView1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -68,4 +74,19 @@
         android:layout_alignRight="@+id/textView2"
         android:layout_alignEnd="@+id/textView2"
         android:textSize="20dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open the new activity"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="10dp"
+        />
+          </RelativeLayout>
+
+</ScrollView>
 </RelativeLayout>
