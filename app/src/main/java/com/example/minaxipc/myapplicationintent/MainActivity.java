@@ -6,9 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
       Button b1,b2,b3;
+      EditText med1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         b1=(Button)findViewById(R.id.button);
         b3=(Button)findViewById(R.id.button3);
+        med1=(EditText)findViewById(R.id.et1);
 
         b1.setOnClickListener(new View.OnClickListener() {
 
@@ -42,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),NewActivity.class);
+
+                int age = Integer.parseInt(med1.getText().toString());
+                i.putExtra("age",age);
                 startActivity(i);
             }
         });
