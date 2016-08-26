@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
       Button b1,b2,b3;
-      EditText med1;
+      EditText med1,med2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         b3=(Button)findViewById(R.id.button3);
         med1=(EditText)findViewById(R.id.et1);
 
+        med2=(EditText)findViewById(R.id.et2);
         b1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),NewActivity.class);
 
+                i.putExtra("data",med2.getText().toString());
                 int age = Integer.parseInt(med1.getText().toString());
                 i.putExtra("age",age);
                 startActivity(i);
