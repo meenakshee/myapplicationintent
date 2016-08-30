@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-         textView=(TextView)findViewById(R.id.tv3);
+        textView = (TextView) findViewById(R.id.tv3);
 
         b1 = (Button) findViewById(R.id.button);
         b3 = (Button) findViewById(R.id.button3);
@@ -65,16 +65,15 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
 
-
-        if (requestCode==1)
-        {
-            if (requestCode==RESULT_OK) {
-                int roll_no = data.getIntExtra("roll no", -1);
-                if (-1 == roll_no) {
-                    textView.setText("My roll_no" + roll_no + ".");
+        if (requestCode == 1) {
+            if (requestCode == RESULT_OK) {
+                Bundle bundle = getIntent().getExtras();
+                if (bundle != null) {
+                    int roll_no = bundle.getInt("roll_no", 0);
+                    textView.setText(data + "     Roll No. is   :  " + roll_no);
                 }
             }
+            super.onActivityResult(requestCode, resultCode, data);
         }
-        super.onActivityResult(requestCode, resultCode, data);
     }
-    }
+}
