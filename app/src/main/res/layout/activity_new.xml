@@ -9,9 +9,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.minaxipc.myapplicationintent.NewActivity">
     <TextView android:id="@+id/tv1"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="100dp"
         />
 
 
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="pass data"
+        android:id="@+id/button4"
+        android:layout_below="@id/tv1" />
 </RelativeLayout>
