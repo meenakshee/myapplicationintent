@@ -15,7 +15,7 @@ public class NewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new);
         TextView mtv = (TextView) findViewById(R.id.tv1);
-        EditText editText;
+        final EditText editText;
         Button mbtn;
         mbtn=(Button)findViewById(R.id.button4) ;
         editText=(EditText)findViewById(R.id.et1);
@@ -30,7 +30,8 @@ public class NewActivity extends AppCompatActivity {
            @Override
            public void onClick(View view) {
                Intent i=new Intent();
-               i.putExtra("roll_no.",123);
+               int roll_no  = Integer.parseInt(editText.getText().toString());
+               i.putExtra("roll_no.",roll_no);
                setResult(RESULT_OK,i);
                finish();
 
